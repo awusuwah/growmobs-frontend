@@ -1,0 +1,20 @@
+.view {
+  max-width: 800px;
+  margin: 100px auto 0 auto;
+}
+
+// Style things specifically for the `strains` page.
+.strains-view {
+  .buttons {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  button.action {
+    // Make sure there is enough space between the text and the icon
+    i {
+      margin-left: 10px;
+    }
+  }
+}
