@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Navbar from "./navbar/Navbar";
+import GrowsView from "../views/GrowsView";
 import StrainsView from "../views/StrainsView";
 
 /**
@@ -17,6 +18,9 @@ const App = () => {
         <Navbar />
 
         <Switch>
+          <Route exact path="/grows">
+            <GrowsView />
+          </Route>
           <Route exact path="/strains">
             <StrainsView />
           </Route>

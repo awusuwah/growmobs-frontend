@@ -2,6 +2,9 @@ import {
   ADD_STRAIN,
   ADD_STRAIN_FAILURE,
   ADD_STRAIN_SUCCESS,
+  FETCH_ALL_STRAINS,
+  FETCH_ALL_STRAINS_FAILURE,
+  FETCH_ALL_STRAINS_SUCCESS,
 } from "../actions/strains.actions";
 
 /**
@@ -38,6 +41,27 @@ export default (state = preloadedState, action) => {
         isLoading: false,
         strainList: [...state.strainList, action.payload],
       });
+
+    case FETCH_ALL_STRAINS:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    case FETCH_ALL_STRAINS_FAILURE:
+      return {
+        ...state,
+        error: action.payload,
+        isLoading: false,
+      };
+
+    case FETCH_ALL_STRAINS_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        isLoading: false,
+        strainList: action.payload,
+      };
 
     default:
       return state;

@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 /**
- * The navbar
+ * The navbar which allows the user to navigate the application.
+ *
+ * @author Marko Maric
  */
 const Navbar = () => {
   return (
